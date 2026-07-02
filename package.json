@@ -1,0 +1,35 @@
+{
+  "name": "base64-encoder-decoder",
+  "version": "1.0.0",
+  "description": "Production-ready Base64 Encoder/Decoder with JWT support, dark mode, and full accessibility",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python -m http.server 8000 --directory .",
+    "serve:node": "npx http-server",
+    "test": "echo \"Add testing framework when needed\"",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "base64",
+    "encoder",
+    "decoder",
+    "jwt",
+    "saml",
+    "data-uri",
+    "online tool",
+    "free"
+  ],
+  "author": "Paul O'Donnell",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/base64-encoder.git"
+  },
+  "homepage": "https://base64-encoder.pro/",
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

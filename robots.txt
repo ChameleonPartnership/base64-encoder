@@ -1,0 +1,25 @@
+# Base64 Encoder/Decoder - robots.txt
+# Generated for SEO optimization
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay to be respectful to servers
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://base64-encoder.pro/sitemap.xml
+
+# Archive rules
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Crawl-delay: 5
+
+# Google Search Console can crawl everything
+User-agent: Googlebot
+Allow: /

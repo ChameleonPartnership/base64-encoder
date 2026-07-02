@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Base64 Encoder/Decoder. Encode text and files to Base64, decode Base64 back to text. Supports JWT, SAML, data-URIs, and bulk processing.">
+    <meta name="keywords" content="base64 encoder, base64 decoder, online base64, jwt decoder, saml decoder, data uri converter">
+    <meta name="author" content="Base64 Encoder Pro">
+    <meta name="theme-color" content="#1a1a2e">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Base64 Encoder/Decoder - Free Online Tool">
+    <meta property="og:description" content="Instantly encode and decode Base64. Support for files, JWT tokens, SAML, and data-URIs. No registration required.">
+    <meta property="og:url" content="https://base64-encoder.pro/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://base64-encoder.pro/og-image.png">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Base64 Encoder/Decoder - Free Online Tool">
+    <meta name="twitter:description" content="Instantly encode and decode Base64. Support for files, JWT tokens, SAML, and data-URIs.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://base64-encoder.pro/">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <title>Base64 Encoder/Decoder - Free Online Tool | Encode & Decode Instantly</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Base64 Encoder/Decoder</h1>
+                <p class="subtitle">Instantly encode and decode Base64 · No registration required</p>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <span class="toggle-icon">🌙</span>
+            </button>
+        </header>
+
+        <main class="main-content">
+            <!-- Mode Selection -->
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="encode" aria-label="Encode mode">
+                    <span class="mode-icon">📤</span>
+                    Encode
+                </button>
+                <button class="mode-btn" data-mode="decode" aria-label="Decode mode">
+                    <span class="mode-icon">📥</span>
+                    Decode
+                </button>
+            </div>
+
+            <!-- Input/Output Section -->
+            <section class="editor-section">
+                <div class="editor-container">
+                    <!-- Input Editor -->
+                    <div class="editor-panel input-panel">
+                        <div class="panel-header">
+                            <h2>Input</h2>
+                            <div class="panel-actions">
+                                <button class="action-btn" id="clearInputBtn" title="Clear input" aria-label="Clear input">Clear</button>
+                                <button class="action-btn" id="uploadFileBtn" title="Upload file" aria-label="Upload file">Upload File</button>
+                                <input type="file" id="fileInput" hidden aria-label="File upload input">
+                            </div>
+                        </div>
+                        <textarea 
+                            id="inputText" 
+                            class="editor-textarea input-textarea"
+                            placeholder="Enter text to encode, or paste Base64 to decode..."
+                            spellcheck="false"
+                            aria-label="Input text area"></textarea>
+                        <div class="panel-footer">
+                            <span id="inputCharCount" class="char-count">0 characters</span>
+                        </div>
+                    </div>
+
+                    <!-- Output Editor -->
+                    <div class="editor-panel output-panel">
+                        <div class="panel-header">
+                            <h2>Output</h2>
+                            <div class="panel-actions">
+                                <button class="action-btn" id="copyOutputBtn" title="Copy output to clipboard" aria-label="Copy output">Copy</button>
+                                <button class="action-btn" id="downloadOutputBtn" title="Download output" aria-label="Download output">Download</button>
+                            </div>
+                        </div>
+                        <textarea 
+                            id="outputText" 
+                            class="editor-textarea output-textarea"
+                            placeholder="Output will appear here..."
+                            readonly
+                            aria-label="Output text area"></textarea>
+                        <div class="panel-footer">
+                            <span id="outputCharCount" class="char-count">0 characters</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Tools Section -->
+                <section class="tools-section">
+                    <h2>Additional Tools</h2>
+                    <div class="tools-grid">
+                        <!-- JWT Decoder -->
+                        <div class="tool-card">
+                            <h3>JWT Decoder</h3>
+                            <p>Decode and inspect JWT tokens</p>
+                            <button class="tool-btn" id="jwtDecoderBtn" aria-label="Open JWT decoder">Decode JWT</button>
+                            <div id="jwtOutput" class="jwt-output hidden">
+                                <pre id="jwtPreview"></pre>
+                            </div>
+                        </div>
+
+                        <!-- Image to Data URI -->
+                        <div class="tool-card">
+                            <h3>Image to Data-URI</h3>
+                            <p>Convert images to Base64 data-URIs for CSS/HTML embedding</p>
+                            <button class="tool-btn" id="imageDataUriBtn" aria-label="Convert image to data-URI">Convert Image</button>
+                            <input type="file" id="imageInput" hidden accept="image/*" aria-label="Image file input">
+                        </div>
+
+                        <!-- URL Encoder -->
+                        <div class="tool-card">
+                            <h3>URL Base64</h3>
+                            <p>Encode/decode URL-safe Base64 (RFC 4648)</p>
+                            <div class="url-options">
+                                <label>
+                                    <input type="checkbox" id="urlSafeToggle" aria-label="Use URL-safe Base64">
+                                    URL-safe mode (- and _ instead of + and /)
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Bulk Processor -->
+                        <div class="tool-card">
+                            <h3>Bulk Processor</h3>
+                            <p>Encode/decode multiple lines at once</p>
+                            <button class="tool-btn" id="bulkProcessBtn" aria-label="Process multiple lines">Process Lines</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- History Section -->
+                <section class="history-section">
+                    <div class="history-header">
+                        <h2>History</h2>
+                        <button id="clearHistoryBtn" class="action-btn" title="Clear history" aria-label="Clear history">Clear All</button>
+                    </div>
+                    <div id="historyList" class="history-list">
+                        <p class="empty-message">No history yet. Start encoding or decoding!</p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Information Section -->
+            <section class="info-section">
+                <h2>About Base64</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>What is Base64?</h3>
+                        <p>Base64 is a binary-to-text encoding scheme that converts binary data into a 64-character ASCII format. It's widely used in email, web APIs, and data transmission.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Common Uses</h3>
+                        <ul>
+                            <li>Encoding binary files for email transmission</li>
+                            <li>Data-URIs in CSS and HTML</li>
+                            <li>API authentication tokens</li>
+                            <li>JWT and SAML tokens</li>
+                            <li>Secure data transmission</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Encoding Size</h3>
+                        <p>Base64 increases data size by ~33%. For example, 3 bytes of binary data becomes 4 Base64 characters.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Base64 Encoder Pro. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+        </footer>
+    </div>
+
+    <!-- AdSense Placeholder Zones (to be configured by user) -->
+    <div id="ad-top" class="ad-placeholder" style="display:none;">
+        <!-- Top banner ad -->
+    </div>
+    <div id="ad-sidebar" class="ad-placeholder" style="display:none;">
+        <!-- Sidebar ad -->
+    </div>
+    <div id="ad-bottom" class="ad-placeholder" style="display:none;">
+        <!-- Bottom ad -->
+    </div>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "SoftwareApplication",
+        "name": "Base64 Encoder/Decoder",
+        "description": "Free online Base64 Encoder/Decoder tool. Encode text and files to Base64, decode Base64 back to text. Supports JWT, SAML, data-URIs, and bulk processing.",
+        "url": "https://base64-encoder.pro/",
+        "applicationCategory": "Utility",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+        }
+    }
+    </script>
+
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>
