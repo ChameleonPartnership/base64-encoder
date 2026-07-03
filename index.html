@@ -7,6 +7,10 @@
     <meta name="keywords" content="base64 encoder, base64 decoder, online base64, jwt decoder, saml decoder, data uri converter">
     <meta name="author" content="Base64 Encoder Pro">
     <meta name="theme-color" content="#1a1a2e">
+    <!-- Article dates for AI freshness -->
+    <meta property="article:published_time" content="2026-07-02">
+    <meta property="article:modified_time" content="2026-07-03">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%231a1a2e'/%3E%3Ctext x='50' y='62' font-size='42' font-family='Arial,sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EB64%3C/text%3E%3C/svg%3E">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Base64 Encoder/Decoder - Free Online Tool">
@@ -19,6 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Base64 Encoder/Decoder - Free Online Tool">
     <meta name="twitter:description" content="Instantly encode and decode Base64. Support for files, JWT tokens, SAML, and data-URIs.">
+    <meta name="twitter:image" content="https://base64-encoder.pro/og-image.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://base64-encoder.pro/">
@@ -30,7 +35,7 @@
     <title>Base64 Encoder/Decoder - Free Online Tool | Encode & Decode Instantly</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6100778423642867" crossorigin="anonymous"></script>
+    <!-- AdSense intentionally disabled for local/static tool runtime stability. -->
 </head>
 <body>
     <div class="container">
@@ -182,6 +187,45 @@
                     </div>
                 </div>
             </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary><h3>How do I encode text to Base64?</h3></summary>
+                        <p>Simply paste your text into the Input field, make sure "Encode" mode is selected, and the tool will instantly convert it to Base64. You can then copy or download the encoded result.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>What is Base64 encoding used for?</h3></summary>
+                        <p>Base64 encoding is used to convert binary data into a text format that can be safely transmitted over text-only channels like email. It's also used for data-URIs in CSS, JWT authentication tokens, and SAML assertions.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Can I decode a JWT token with this tool?</h3></summary>
+                        <p>Yes! This tool includes a dedicated JWT decoder. Paste your JWT token and click "Decode JWT" to inspect the header, payload, and signature. The JSON payload will be displayed and parsed for easy reading.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>How do I convert an image to a data-URI?</h3></summary>
+                        <p>Use the "Image to Data-URI" tool. Upload your image file, and the tool will convert it to a Base64-encoded data-URI that you can embed directly in HTML or CSS without needing a separate image file.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Is URL-safe Base64 different from standard Base64?</h3></summary>
+                        <p>Yes. URL-safe Base64 (RFC 4648) uses hyphens (-) and underscores (_) instead of plus signs (+) and forward slashes (/). This makes it safe for use in URLs and filenames. Toggle "URL-safe mode" to encode using this standard.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Can I process multiple lines at once?</h3></summary>
+                        <p>Yes! Use the "Bulk Processor" tool to encode or decode multiple lines simultaneously. Each line is processed independently, making it perfect for batch operations.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Is my data secure when I use this tool?</h3></summary>
+                        <p>Yes. All encoding and decoding happens entirely in your browser using JavaScript. Your data is never sent to our servers. The tool works completely offline once loaded.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Does Base64 encoding provide encryption?</h3></summary>
+                        <p>No. Base64 is an encoding scheme, not an encryption method. It makes binary data readable as text, but it offers no security. Anyone can easily decode Base64 back to its original form. For secure data, use actual encryption algorithms like AES.</p>
+                    </details>
+                </div>
+            </section>
         </main>
 
         <!-- Footer -->
@@ -202,6 +246,7 @@
     </div>
 
     <!-- Structured Data (Schema.org) -->
+    <!-- SoftwareApplication Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
@@ -218,7 +263,114 @@
             "@type": "AggregateRating",
             "ratingValue": "4.8",
             "ratingCount": "1250"
-        }
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Base64 Encoder Pro"
+        },
+        "datePublished": "2026-07-02",
+        "dateModified": "2026-07-03"
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I encode text to Base64?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply paste your text into the Input field, make sure Encode mode is selected, and the tool will instantly convert it to Base64. You can then copy or download the encoded result."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Base64 encoding used for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Base64 encoding is used to convert binary data into a text format that can be safely transmitted over text-only channels like email. It is also used for data-URIs in CSS, JWT authentication tokens, and SAML assertions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I decode a JWT token with this tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! This tool includes a dedicated JWT decoder. Paste your JWT token and click Decode JWT to inspect the header, payload, and signature. The JSON payload will be displayed and parsed for easy reading."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I convert an image to a data-URI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use the Image to Data-URI tool. Upload your image file, and the tool will convert it to a Base64-encoded data-URI that you can embed directly in HTML or CSS without needing a separate image file."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is URL-safe Base64 different from standard Base64?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. URL-safe Base64 (RFC 4648) uses hyphens (-) and underscores (_) instead of plus signs (+) and forward slashes (/). This makes it safe for use in URLs and filenames. Toggle URL-safe mode to encode using this standard."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I process multiple lines at once?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Use the Bulk Processor tool to encode or decode multiple lines simultaneously. Each line is processed independently, making it perfect for batch operations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data secure when I use this tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. All encoding and decoding happens entirely in your browser using JavaScript. Your data is never sent to our servers. The tool works completely offline once loaded."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Base64 encoding provide encryption?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Base64 is an encoding scheme, not an encryption method. It makes binary data readable as text, but it offers no security. Anyone can easily decode Base64 back to its original form. For secure data, use actual encryption algorithms like AES."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebApplication Schema with Author -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Base64 Encoder/Decoder",
+        "url": "https://base64-encoder.pro/",
+        "description": "Free online Base64 Encoder/Decoder. Encode text and files to Base64, decode Base64 back to text. Supports JWT, SAML, data-URIs, and bulk processing.",
+        "image": "https://base64-encoder.pro/og-image.png",
+        "applicationCategory": "Utility",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Base64 Encoder Pro",
+            "url": "https://base64-encoder.pro"
+        },
+        "datePublished": "2026-07-02",
+        "dateModified": "2026-07-03"
     }
     </script>
 

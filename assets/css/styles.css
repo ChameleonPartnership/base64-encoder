@@ -779,6 +779,125 @@ a:focus:not(:focus-visible) {
 }
 
 /* ============================================
+   FAQ Section Styles
+   ============================================ */
+
+.faq-section {
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.faq-section h2 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-xl);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.faq-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+}
+
+.faq-item summary {
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-primary);
+    transition: background 0.2s ease;
+}
+
+.faq-item summary:hover {
+    background: var(--bg-secondary);
+}
+
+.faq-item summary h3 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.faq-item summary::marker {
+    color: var(--accent-color);
+}
+
+.faq-item[open] > summary {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Dark mode FAQ styles */
+[data-theme="dark"] .faq-item,
+body.dark-mode .faq-item {
+    background: var(--dark-bg-secondary);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .faq-item summary,
+body.dark-mode .faq-item summary {
+    background: var(--dark-bg-secondary);
+}
+
+[data-theme="dark"] .faq-item summary h3,
+body.dark-mode .faq-item summary h3 {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .faq-item summary:hover,
+body.dark-mode .faq-item summary:hover {
+    background: var(--dark-bg-primary);
+}
+
+[data-theme="dark"] .faq-item p,
+body.dark-mode .faq-item p {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .faq-item:hover,
+body.dark-mode .faq-item:hover {
+    border-color: var(--dark-accent-color);
+    box-shadow: 0 2px 8px rgba(74, 158, 255, 0.1);
+}
+
+[data-theme="dark"] .faq-section,
+body.dark-mode .faq-section {
+    background: var(--dark-bg-primary);
+    border-color: var(--dark-border-color);
+}
+
+[data-theme="dark"] .faq-section h2,
+body.dark-mode .faq-section h2 {
+    color: var(--dark-text-primary);
+}
+
+/* ============================================
    Accessibility: Light/Dark Mode Preference
    ============================================ */
 

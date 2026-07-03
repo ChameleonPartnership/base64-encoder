@@ -577,14 +577,3 @@ class Base64App {
 document.addEventListener('DOMContentLoaded', () => {
     new Base64App();
 });
-
-/**
- * ============================================
- * Service Worker Registration (PWA Ready)
- * ============================================
- */
-
-if ('serviceWorker' in navigator) {
-    // Uncomment when service worker is implemented
-    // navigator.serviceWorker.register('/sw.js').catch(console.warn);
-}

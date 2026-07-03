@@ -1,0 +1,52 @@
+# Base64 Encoder/Decoder Pro
+
+> A free, open-source online tool for encoding and decoding Base64 data. No registration required. All processing happens in your browser.
+
+## What We Do
+
+Base64 Encoder/Decoder Pro is a comprehensive utility for working with Base64 encoding — the binary-to-text encoding standard used across the web. Whether you're encoding files for email transmission, working with data-URIs, inspecting JWT tokens, or processing SAML assertions, this tool provides instant, browser-based conversion with no server uploads.
+
+The tool supports standard Base64 encoding, URL-safe Base64 (RFC 4648), file uploads, bulk processing of multiple lines, JWT token inspection, and image-to-data-URI conversion.
+
+## Key Features
+
+- **Encode & Decode**: Instant conversion between plain text and Base64
+- **File Upload**: Upload binary files and encode them to Base64
+- **JWT Decoder**: Inspect and parse JWT authentication tokens
+- **Data-URI Converter**: Convert images to Base64 data-URIs for CSS/HTML embedding
+- **URL-Safe Mode**: Encode using RFC 4648 URL-safe Base64 (- and _ instead of + and /)
+- **Bulk Processor**: Encode or decode multiple lines simultaneously
+- **History**: Track your recent encoding/decoding operations
+- **Dark Mode**: Full light/dark theme support
+- **Privacy**: All processing happens locally in your browser — no server uploads
+
+## Core Topics Covered
+
+- What is Base64 encoding
+- How to encode text and files to Base64
+- How to decode Base64 back to plain text
+- JWT token inspection and validation
+- Image-to-data-URI conversion
+- URL-safe Base64 encoding (RFC 4648)
+- Common uses of Base64 in web development
+- Base64 size overhead (33% increase)
+- Difference between Base64 encoding and encryption
+- Bulk processing and batch conversion
+
+## Use Cases
+
+- Email: Encoding binary attachments for transmission
+- Web Development: Creating data-URIs for CSS background images
+- APIs: Working with Base64-encoded tokens and credentials
+- Security: Inspecting JWT, OAuth, and SAML tokens
+- Data Exchange: Encoding binary data for text-only communication channels
+- Bulk Operations: Processing multiple Base64 strings in batch
+
+## Technology
+
+Built with vanilla JavaScript — no frameworks, no dependencies, no build step. The tool works completely offline once loaded. WCAG AA accessible. Fully responsive mobile design.
+
+---
+
+**Updated:** 2026-07-03  
+**Hosting:** https://base64-encoder.pro/

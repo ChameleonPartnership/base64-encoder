@@ -4,6 +4,7 @@
   "description": "Production-ready Base64 Encoder/Decoder with JWT support, dark mode, and full accessibility",
   "main": "index.html",
   "scripts": {
+    "dev": "python3 -m http.server 8000",
     "serve": "python -m http.server 8000 --directory .",
     "serve:node": "npx http-server",
     "test": "echo \"Add testing framework when needed\"",
