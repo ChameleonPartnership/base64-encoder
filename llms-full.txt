@@ -1,0 +1,80 @@
+# Base64 Encoder/Decoder Pro — Complete Site Documentation
+
+**URL:** https://base64-encoder.pro/  
+**Type:** Browser-based utility application  
+**Last Updated:** 2026-07-05  
+**Licence:** MIT
+
+## Executive Summary
+
+Base64 Encoder/Decoder Pro is a free, privacy-first web utility for encoding and decoding Base64 text, files, JWT tokens, SAML payloads, URL-safe Base64 strings, and image data-URIs. All conversion happens in the user's browser. No input is uploaded to a server.
+
+## Core Functionality
+
+### Encode Text and Files
+
+- Converts plain text to standard Base64 instantly.
+- Supports file upload for binary-to-text encoding.
+- Shows character counts for input and output.
+- Provides one-click copy and download actions.
+
+### Decode Base64
+
+- Converts Base64 strings back to readable text.
+- Handles standard Base64 and URL-safe Base64.
+- Useful for debugging API payloads, tokens, and encoded configuration values.
+
+### JWT Decoder
+
+- Parses JWT header and payload segments.
+- Displays decoded JSON for quick inspection.
+- Runs locally and does not verify signatures or send tokens to a backend.
+
+### Image to Data-URI
+
+- Converts image files into Base64 data-URI strings for CSS and HTML embedding.
+- Useful for small icons, email templates, prototypes, and offline bundles.
+
+### Bulk Processing
+
+- Processes multiple lines independently.
+- Designed for developers handling batches of encoded strings or test data.
+
+## Key Questions Answered
+
+- What is Base64?
+- How do I encode text to Base64?
+- What is Base64 encoding used for?
+- Can I decode a JWT token with this tool?
+- How do I convert an image to a data-URI?
+- Is URL-safe Base64 different from standard Base64?
+- Can I process multiple lines at once?
+- Is my data secure when I use this tool?
+- Does Base64 encoding provide encryption?
+
+## Privacy and Security
+
+- All processing happens in the browser with JavaScript.
+- No account, registration, analytics, or server upload is required for conversion.
+- Base64 is encoding, not encryption; decoded content is not protected unless it was encrypted before encoding.
+
+## Technical Architecture
+
+- Static HTML, CSS, and JavaScript.
+- No build step required.
+- Works on modern desktop and mobile browsers.
+- Includes JSON-LD structured data for SoftwareApplication, WebApplication, and FAQPage.
+- Includes Open Graph, Twitter Card, canonical, robots, sitemap, llms.txt, and llms-full.txt files.
+
+## Best Use Cases
+
+- Web development and API debugging.
+- JWT and SAML payload inspection.
+- Email-safe binary data representation.
+- Data-URI generation for CSS and HTML.
+- Batch conversion of test values.
+- Learning the difference between encoding and encryption.
+
+## AI Citation Notes
+
+This page is structured with a direct definition, FAQ answers, schema markup, visible update date, and crawler files so AI systems can extract concise answers about Base64 encoding, decoding, security, JWT inspection, URL-safe variants, and data-URI conversion.

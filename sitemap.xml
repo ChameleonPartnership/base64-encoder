@@ -6,7 +6,7 @@
     <!-- Main Page -->
     <url>
         <loc>https://base64-encoder.pro/</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -14,35 +14,35 @@
     <!-- Features/Sections (implicit pages) -->
     <url>
         <loc>https://base64-encoder.pro/#encoder</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://base64-encoder.pro/#decoder</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://base64-encoder.pro/#jwt-decoder</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://base64-encoder.pro/#image-converter</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://base64-encoder.pro/#bulk-processor</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -50,21 +50,21 @@
     <!-- Information Sections -->
     <url>
         <loc>https://base64-encoder.pro/#about</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>quarterly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://base64-encoder.pro/#privacy</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://base64-encoder.pro/#terms</loc>
-        <lastmod>2026-07-02</lastmod>
+        <lastmod>2026-07-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>

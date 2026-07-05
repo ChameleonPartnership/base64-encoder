@@ -560,6 +560,8 @@ a:focus:not(:focus-visible) {
    Info Section
    ============================================ */
 
+.intro-section,
+.author-section,
 .info-section {
     margin-top: var(--spacing-2xl);
     padding: var(--spacing-xl);
@@ -572,6 +574,27 @@ a:focus:not(:focus-visible) {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-lg);
     color: var(--text-primary);
+}
+
+.intro-section h2,
+.author-section h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.section-blurb,
+.author-section p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 78ch;
+}
+
+.updated-date {
+    margin-top: var(--spacing-md);
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
 }
 
 .info-grid {
