@@ -1,0 +1,50 @@
+[
+  [
+    "What is Base64?",
+    "Base64 is an encoding scheme that converts binary data into ASCII text using 64 safe characters (A-Z, a-z, 0-9, +, /)."
+  ],
+  [
+    "Why use Base64 encoding?",
+    "Base64 allows binary data to safely transmit over text-based channels like email, HTTP headers, and JSON APIs."
+  ],
+  [
+    "Is Base64 encryption?",
+    "No. Base64 is encoding (reversible), not encryption (secure, key-based). It offers no security."
+  ],
+  [
+    "Can I decode Base64?",
+    "Yes. Base64 is fully reversible. Any Base64 string can be decoded back to original data."
+  ],
+  [
+    "What does the = character mean in Base64?",
+    "The = character is padding used to make Base64 output length a multiple of 4."
+  ],
+  [
+    "How much does Base64 increase file size?",
+    "Base64 increases size by approximately 33% (3 bytes become 4 characters)."
+  ],
+  [
+    "Can I use Base64 for images?",
+    "Yes. Images can be Base64-encoded for embedding in HTML or CSS as data URLs."
+  ],
+  [
+    "What is a data URL?",
+    "A data URL embeds Base64-encoded content directly in HTML using the data: protocol (data:image/png;base64,...)."
+  ],
+  [
+    "Should I use Base64 for all images?",
+    "No. Data URLs increase HTML size significantly. Use for small images or when embedding is necessary."
+  ],
+  [
+    "Is Base64 the only encoding?",
+    "No. Other encodings include URL encoding, hexadecimal, and base32. Choose based on use case."
+  ],
+  [
+    "What are the limitations of Base64?",
+    "Limited to safe ASCII characters, increases file size by 33%, and offers no security or compression."
+  ],
+  [
+    "Can Base64 be used for passwords?",
+    "No. Never use Base64 for passwords. Use proper password hashing (bcrypt, scrypt, Argon2)."
+  ]
+]
