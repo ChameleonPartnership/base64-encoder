@@ -149,26 +149,9 @@ Replace `GA_MEASUREMENT_ID` with your actual ID.
 3. Wait for approval (usually 3-7 days)
 4. Verify site ownership
 
-### 2. Configure Ad Placements
+### 2. Configure AdSense
 
-Once approved, replace placeholder divs in `index.html`:
-
-```html
-<!-- Top Banner Ad (728x90) -->
-<div id="ad-top">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
-    crossorigin="anonymous"></script>
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
-       data-ad-slot="YOUR_AD_SLOT"
-       data-ad-format="leaderboard"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
-```
+Use the approved Auto Ads script only. Do not add manual ad unit placeholders or invent ad slot IDs; created ad units must come from the AdSense account.
 
 ### 3. Update CSS
 

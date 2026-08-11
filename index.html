@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online Base64 Encoder/Decoder. Encode text and files to Base64, decode Base64 back to text. Supports JWT, SAML, data-URIs, and bulk processing.">
+    <meta name="description" content="Free browser-based Base64 encoder and decoder for text, files, JWTs, URL-safe strings, data URIs, and batch conversion.">
     <meta name="keywords" content="base64 encoder, base64 decoder, online base64, jwt decoder, saml decoder, data uri converter">
     <meta name="author" content="Base64 Encoder Pro">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#1a1a2e">
     <!-- Article dates for AI freshness -->
     <meta property="article:published_time" content="2026-07-02">
-    <meta property="article:modified_time" content="2026-07-05">
+    <meta property="article:modified_time" content="2026-08-11">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%231a1a2e'/%3E%3Ctext x='50' y='62' font-size='42' font-family='Arial,sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EB64%3C/text%3E%3C/svg%3E">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Base64 Encoder/Decoder - Free Online Tool">
     <meta property="og:description" content="Instantly encode and decode Base64. Support for files, JWT tokens, SAML, and data-URIs. No registration required.">
-    <meta property="og:url" content="https://base64-encoder.pro/">
+    <meta property="og:url" content="https://www.base64-encoder.pro/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://base64-encoder.pro/og-image.png">
+    <meta property="og:image" content="https://www.base64-encoder.pro/og-image.png">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Base64 Encoder/Decoder - Free Online Tool">
     <meta name="twitter:description" content="Instantly encode and decode Base64. Support for files, JWT tokens, SAML, and data-URIs.">
-    <meta name="twitter:image" content="https://base64-encoder.pro/og-image.png">
+    <meta name="twitter:image" content="https://www.base64-encoder.pro/og-image.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://base64-encoder.pro/">
+    <link rel="canonical" href="https://www.base64-encoder.pro/">
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,24 +53,14 @@
         </header>
 
         <main class="main-content">
-            <!-- AD UNIT 1: Above Calculator (Above-the-fold) -->
-            <div class="ad-container ad-top" style="margin: 1rem 0; min-height: 90px;">
-              <ins class="adsbygoogle"
-                   style="display:block; text-align:center;"
-                   data-ad-layout="in-article"
-                   data-ad-format="horizontal"
-                   data-ad-client="ca-pub-6100778423642867"
-                   data-ad-slot="1234567890"></ins>
-              <script>
-                   (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
-            </div>
+            
 
             <!-- AISO audit trail: added visible answer-first blurb for AI citation and human scanability, 2026-07-05. -->
             <section class="intro-section" id="overview" aria-labelledby="overview-heading">
                 <h2 id="overview-heading">What is this Base64 encoder for?</h2>
                 <p class="section-blurb">This Base64 encoder converts plain text, files, JWT payloads, and image data into or out of Base64 directly in your browser. It is best for developers, support teams, and technical users who need quick encoding, URL-safe Base64, data-URI conversion, or private client-side decoding without uploading data.</p>
-                <p class="updated-date">Last updated: July 5, 2026</p>
+                <p class="section-blurb">Base64 is useful when a system expects text but you need to carry bytes, structured JSON, an image, or another file-safe representation through it. The format is common in email attachments, HTTP APIs, CSS data URLs, authorisation headers, SAML responses, and debugging logs. This page keeps the conversion controls at the top for quick work, then gives practical notes so you can choose the right Base64 variant and avoid treating encoding as security.</p>
+                <p class="updated-date">Last updated: August 11, 2026</p>
             </section>
 
             <!-- Mode Selection -->
@@ -186,12 +176,12 @@
             </section>
 
             <!-- Information Section -->
-            <section class="info-section">
+            <section class="info-section" id="about-base64">
                 <h2>About Base64</h2>
                 <div class="info-grid">
                     <div class="info-card">
                         <h3>What is Base64?</h3>
-                        <p>Base64 is a binary-to-text encoding scheme that converts binary data into a 64-character ASCII format. It's widely used in email, web APIs, and data transmission.</p>
+                        <p>Base64 is a binary-to-text encoding scheme that represents bytes with a limited ASCII alphabet: uppercase letters, lowercase letters, numbers, plus, slash, and equals signs for padding. It was designed for channels that handle text reliably but may not safely carry raw binary data.</p>
                     </div>
                     <div class="info-card">
                         <h3>Common Uses</h3>
@@ -210,31 +200,116 @@
                 </div>
             </section>
 
-<!-- AD UNIT 2: Sidebar Ad -->
-<div class="ad-container ad-sidebar" style="margin-bottom: 2rem; min-height: 250px;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-6100778423642867"
-       data-ad-slot="2345678901"
-       data-ad-format="rectangle"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
+            <section class="info-section" id="how-it-works">
+                <h2>How Base64 encoding works</h2>
+                <p class="section-blurb">Base64 groups the original bytes into blocks of three, producing 24 bits at a time. Those 24 bits are split into four 6-bit values, and each value is mapped to one printable character from the Base64 alphabet. If the final block has only one or two bytes, equals signs are added as padding so the output length still fits the four-character grouping.</p>
+                <p class="section-blurb">For a short text example, the word <strong>Hello</strong> becomes <code>SGVsbG8=</code>. The visible letters are not encrypted or hidden; they are simply a different representation of the same bytes. If you paste <code>SGVsbG8=</code> into decode mode, the browser reconstructs the original UTF-8 text and displays <strong>Hello</strong>.</p>
+                <p class="section-blurb">The URL-safe option follows RFC 4648 by replacing <code>+</code> with <code>-</code> and <code>/</code> with <code>_</code>. Many systems also remove trailing padding when a Base64 value is placed in a URL path, query parameter, filename, or JSON Web Token segment. This tool accepts padded and unpadded URL-safe strings and adds any missing padding before decoding.</p>
+            </section>
 
-<!-- AD UNIT 3: Before FAQ (Mid-content) -->
-<div class="ad-container ad-mid" style="margin: 2rem 0; min-height: 90px;">
-  <ins class="adsbygoogle"
-       style="display:block; text-align:center;"
-       data-ad-layout="in-article"
-       data-ad-format="horizontal"
-       data-ad-client="ca-pub-6100778423642867"
-       data-ad-slot="3456789012"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
+            <section class="info-section" id="guide">
+                <h2>Step-by-step guide</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Encode text</h3>
+                        <p>Select Encode, paste <code>API key: demo-123</code> into the input field, and copy the generated output <code>QVBJIGtleTogZGVtby0xMjM=</code>. Use this when a test fixture, documentation sample, or API request needs a Base64 string instead of plain text.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Decode text</h3>
+                        <p>Select Decode and paste <code>eyJzdGF0dXMiOiJvayJ9</code>. The output is <code>{"status":"ok"}</code>. If decoding fails, check for accidental spaces, missing characters, or a value that is compressed, encrypted, or URL encoded before Base64 was applied.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Use URL-safe mode</h3>
+                        <p>Turn on URL-safe mode when the value will sit inside a URL, filename, cookie value, or JWT segment. For example, bytes that would normally produce <code>+w==</code> may be written as <code>-w</code> in URL-safe form.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Convert images</h3>
+                        <p>Choose Image to Data-URI, select a small image, and copy the generated <code>data:image/...;base64,</code> string. This is practical for tiny icons or single-file prototypes, but large images should usually remain separate assets so pages stay cacheable and easy to maintain.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Inspect JWTs</h3>
+                        <p>Paste a JWT and use Decode JWT to inspect the header and payload. The tool decodes the readable segments, but it does not verify the signature or tell you whether the token is trustworthy. Treat any token shown in a browser as sensitive.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Process batches</h3>
+                        <p>Put one value per line and use the bulk processor when you need to convert a list of test identifiers, fixture values, or log snippets. Each line is handled separately so one malformed value is easier to spot.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section" id="examples">
+                <h2>Worked examples</h2>
+                <div class="example-table-wrapper">
+                    <table class="example-table">
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Input</th>
+                                <th>Output</th>
+                                <th>When it helps</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Encode a greeting</td>
+                                <td><code>Hello, world!</code></td>
+                                <td><code>SGVsbG8sIHdvcmxkIQ==</code></td>
+                                <td>Quickly confirm that an integration expects standard Base64 text.</td>
+                            </tr>
+                            <tr>
+                                <td>Decode JSON</td>
+                                <td><code>eyJyb2xlIjoiYWRtaW4ifQ==</code></td>
+                                <td><code>{"role":"admin"}</code></td>
+                                <td>Read a configuration snippet, fixture, or token payload during debugging.</td>
+                            </tr>
+                            <tr>
+                                <td>Decode URL-safe text</td>
+                                <td><code>SGVsbG8tdXJsX3NhZmU</code></td>
+                                <td><code>Hello-url_safe</code></td>
+                                <td>Check values copied from URLs, route parameters, or JWT segments.</td>
+                            </tr>
+                            <tr>
+                                <td>Build a data URL</td>
+                                <td><code>small logo file</code></td>
+                                <td><code>data:image/png;base64,...</code></td>
+                                <td>Embed a tiny asset in a prototype, email template, or CSS proof of concept.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="info-section" id="use-cases">
+                <h2>Practical use cases</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>API development</h3>
+                        <p>Developers often need Base64 for basic authentication headers, binary-safe JSON fields, sample payloads, and mocked webhook events. Keeping the conversion in the browser makes it fast to verify examples while writing documentation or tests.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Support and incident response</h3>
+                        <p>Support teams can decode a copied payload, check whether it is plain JSON, and decide whether to escalate to engineering. Because the tool is client-side, the entered text is not uploaded to a conversion endpoint.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Frontend prototyping</h3>
+                        <p>Small SVGs, icons, and placeholders can be converted into data URLs for quick prototypes. The trade-off is file size: Base64 is larger than the original bytes and prevents the browser from caching the asset separately.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Security reviews</h3>
+                        <p>Base64 often appears in tokens, logs, and suspicious strings. Decoding can reveal whether a value is harmless text, structured data, or another encoded layer, but it should never be treated as proof that the data is authentic.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section" id="resources">
+                <h2>Base64 guides on this site</h2>
+                <p class="section-blurb">These internal guides give more context for common Base64 decisions:</p>
+                <div class="resource-list">
+                    <a href="blog/base64-encoding-history.html">Base64 encoding history and applications</a>
+                    <a href="blog/encoding-web-development.html">Encoding and decoding in web development</a>
+                    <a href="blog/data-urls-base64-images.html">Data URLs and Base64 images</a>
+                </div>
+            </section>
 
             <!-- FAQ Section -->
             <section class="faq-section">
@@ -272,6 +347,22 @@
                         <summary><h3>Does Base64 encoding provide encryption?</h3></summary>
                         <p>No. Base64 is an encoding scheme, not an encryption method. It makes binary data readable as text, but it offers no security. Anyone can easily decode Base64 back to its original form. For secure data, use actual encryption algorithms like AES.</p>
                     </details>
+                    <details class="faq-item">
+                        <summary><h3>Why does Base64 output sometimes end with equals signs?</h3></summary>
+                        <p>Equals signs are padding. They show that the final byte group was shorter than three bytes, so the encoder filled the four-character output block. Some URL-safe systems remove padding, but standard Base64 commonly keeps it.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Why is my decoded output unreadable?</h3></summary>
+                        <p>The original data may be binary, compressed, encrypted, or not UTF-8 text. Base64 can represent any bytes, so decoding does not guarantee a human-readable result. If the source was an image, archive, or encrypted value, you need the correct file format or decryption step after decoding.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Can I use Base64 for passwords or secrets?</h3></summary>
+                        <p>No. Base64 is reversible by design. It is acceptable for transport formatting, but secrets should be protected with proper hashing, encryption, access controls, and secure storage practices.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary><h3>Does this tool upload files that I convert?</h3></summary>
+                        <p>No. File reading uses browser APIs on your device. The resulting encoded text appears in the output field, and you choose whether to copy or download it.</p>
+                    </details>
                 </div>
             </section>
 
@@ -279,26 +370,15 @@
             <section class="author-section" aria-label="Base64 Encoder Pro editorial details">
                 <h2>Who maintains Base64 Encoder Pro?</h2>
                 <p class="section-blurb">Base64 Encoder Pro is maintained as a privacy-first developer utility with browser-only processing, accessible controls, and practical documentation for common encoding workflows. The page is reviewed for accuracy when browser APIs, JWT usage patterns, or Base64 best practices change.</p>
-                <p class="updated-date">Reviewed by Base64 Encoder Pro. Last updated: July 5, 2026.</p>
+                <p class="updated-date">Reviewed by Base64 Encoder Pro. Last updated: August 11, 2026.</p>
             </section>
-<!-- AD UNIT 4: Before Footer (Bottom content) -->
-<div class="ad-container ad-bottom" style="margin: 2rem 0; min-height: 90px;">
-  <ins class="adsbygoogle"
-       style="display:block; text-align:center;"
-       data-ad-layout="in-article"
-       data-ad-format="horizontal"
-       data-ad-client="ca-pub-6100778423642867"
-       data-ad-slot="4567890123"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
+
 
         </main>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2026 Base64 Encoder Pro. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            <p>&copy; 2026 Base64 Encoder Pro. All rights reserved. | <a href="about.html">About</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
         </footer>
     </div>
 
@@ -310,7 +390,7 @@
         "@type": "SoftwareApplication",
         "name": "Base64 Encoder/Decoder",
         "description": "Free online Base64 Encoder/Decoder tool. Encode text and files to Base64, decode Base64 back to text. Supports JWT, SAML, data-URIs, and bulk processing.",
-        "url": "https://base64-encoder.pro/",
+        "url": "https://www.base64-encoder.pro/",
         "applicationCategory": "Utility",
         "offers": {
             "@type": "Offer",
@@ -326,7 +406,7 @@
             "name": "Base64 Encoder Pro"
         },
         "datePublished": "2026-07-02",
-        "dateModified": "2026-07-05"
+        "dateModified": "2026-08-11"
     }
     </script>
 
@@ -410,7 +490,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Base64 Encoder Pro",
-        "url": "https://base64-encoder.pro/",
+        "url": "https://www.base64-encoder.pro/",
         "description": "Privacy-first browser-based Base64 encoding and decoding tools for developers.",
         "sameAs": [
             "https://github.com/yourusername/base64-encoder"
@@ -428,13 +508,13 @@
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://base64-encoder.pro/"
+                "item": "https://www.base64-encoder.pro/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Base64 Encoder/Decoder",
-                "item": "https://base64-encoder.pro/#overview"
+                "item": "https://www.base64-encoder.pro/#overview"
             }
         ]
     }
@@ -446,9 +526,9 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Base64 Encoder/Decoder",
-        "url": "https://base64-encoder.pro/",
+        "url": "https://www.base64-encoder.pro/",
         "description": "Free online Base64 Encoder/Decoder. Encode text and files to Base64, decode Base64 back to text. Supports JWT, SAML, data-URIs, and bulk processing.",
-        "image": "https://base64-encoder.pro/og-image.png",
+        "image": "https://www.base64-encoder.pro/og-image.png",
         "applicationCategory": "Utility",
         "operatingSystem": "Any",
         "browserRequirements": "Requires JavaScript",
@@ -460,13 +540,14 @@
         "author": {
             "@type": "Organization",
             "name": "Base64 Encoder Pro",
-            "url": "https://base64-encoder.pro"
+            "url": "https://www.base64-encoder.pro"
         },
         "datePublished": "2026-07-02",
-        "dateModified": "2026-07-05"
+        "dateModified": "2026-08-11"
     }
     </script>
 
+    <script src="assets/js/consent.js" defer></script>
     <script src="assets/js/app.js" defer></script>
 </body>
 </html>

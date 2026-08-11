@@ -11,7 +11,7 @@ Disallow: /private/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://base64-encoder.pro/sitemap.xml
+Sitemap: https://www.base64-encoder.pro/sitemap.xml
 
 # Archive rules
 User-agent: AhrefsBot

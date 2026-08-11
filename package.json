@@ -26,7 +26,7 @@
     "type": "git",
     "url": "https://github.com/yourusername/base64-encoder.git"
   },
-  "homepage": "https://base64-encoder.pro/",
+  "homepage": "https://www.base64-encoder.pro/",
   "devDependencies": {
     "http-server": "^14.1.0"
   },
