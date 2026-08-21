@@ -1,6 +1,6 @@
 # Base64 Encoder/Decoder Pro — Complete Site Documentation
 
-**URL:** https://base64-encoder.pro/  
+**URL:** https://www.base64-encoder.pro/  
 **Type:** Browser-based utility application  
 **Last Updated:** 2026-07-05  
 **Licence:** MIT

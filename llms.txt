@@ -49,4 +49,4 @@ Built with vanilla JavaScript — no frameworks, no dependencies, no build step.
 ---
 
 **Updated:** 2026-07-05  
-**Hosting:** https://base64-encoder.pro/
+**Hosting:** https://www.base64-encoder.pro/
